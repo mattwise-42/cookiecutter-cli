@@ -21,7 +21,7 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build the hello-docker Docker image
+    - name: Build the cookiecutter-cli Docker image
       run: |
             docker build . --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
             docker run ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
