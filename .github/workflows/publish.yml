@@ -3,7 +3,8 @@ name: publish
 on: [push]
 
 env:
-  IMAGE_NAME: cookiecutter-cli
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
   IMAGE_TAG: ${{ github.sha }}
 
 jobs:
