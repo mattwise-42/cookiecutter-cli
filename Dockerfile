@@ -15,4 +15,6 @@ RUN apk add --no-cache \
     unzip \
     zip
 
+RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
+
 RUN pip install cookiecutter
